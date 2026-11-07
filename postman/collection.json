@@ -1,0 +1,32 @@
+{
+  "info": {
+    "name": "Returns Platform API v1",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Health",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": "{{base_url}}/api/v1/health"
+      }
+    },
+    {
+      "name": "List RMAs",
+      "request": {
+        "method": "GET",
+        "header": [
+          { "key": "Authorization", "value": "Bearer {{token}}" },
+          { "key": "X-Tenant-ID", "value": "{{tenant_id}}" }
+        ],
+        "url": "{{base_url}}/api/v1/rmas"
+      }
+    }
+  ],
+  "variable": [
+    { "key": "base_url", "value": "http://localhost" },
+    { "key": "token", "value": "" },
+    { "key": "tenant_id", "value": "" }
+  ]
+}
